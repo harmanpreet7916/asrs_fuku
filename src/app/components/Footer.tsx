@@ -30,6 +30,7 @@ const Footer = ({ callUnityFunction }) => {
     };
 
     const restartAnimation = async () => {
+        await callUnityFunction("GameManager", "Pause");
 
         await callUnityFunction("GameManager", "Restart");
         setplayAnimation(true)
